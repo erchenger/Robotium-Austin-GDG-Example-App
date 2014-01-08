@@ -18,14 +18,14 @@ public class TestUserLogin extends AbstractSystemTestBase<MainActivity>{
 
 		//Is there a place to put my name
 		EditText resultET = (EditText) solo.getView(R.id.name_input);
-		assertTrue(resultET!=null);
+		assertTrue("Couldn't find the name_input EditText",resultET!=null);
 		
 		solo.typeText(resultET, "Elliott Chenger");
-		assertTrue(solo.searchEditText("Elliott Chenger"));
+		assertTrue("Couldn't find the text 'Elliott Chenger' that was typed",solo.searchEditText("Elliott Chenger"));
 
 		//Is there a button to log in
 		Button resultBtn = (Button)solo.getView(R.id.login_btn);
-		assertTrue(resultBtn != null);
+		assertTrue("Couldn't find the login button",resultBtn != null);
 
 		//Click on the Log in button
 		solo.clickOnButton("Log In");
@@ -38,31 +38,19 @@ public class TestUserLogin extends AbstractSystemTestBase<MainActivity>{
 
 		//Is there a place to put my name
 		EditText resultET = (EditText) solo.getView(R.id.name_input);
-		assertTrue(resultET!=null);
+		assertTrue("Couldn't find the name_input EditText",resultET!=null);
 
 		//Is there a button to log in
 		Button resultBtn = (Button)solo.getView(R.id.login_btn);
-		assertTrue(resultBtn != null);
+		assertTrue("Couldn't find the login button",resultBtn != null);
 
 		//Click on the Log in button
 		solo.clickOnButton("Log In");
 
 		assertTrue("Log in error dialog never opened!",solo.waitForDialogToOpen(WAIT_FOR_DIALOG_TIMEOUT));
 		
-		assertTrue(solo.waitForText("Error"));
-		assertTrue(solo.waitForText("No user name"));
+		assertTrue("Couldn't find the Title for the Dialog 'Error'",solo.waitForText("Error"));
+		assertTrue("Couldn't find the message for the Dialog 'No user name'",solo.waitForText("No user name"));
 	}
 	
-	public void testUserClicksDialog(){
-		assertTrue("Main Activity never started",solo.waitForActivity(MainActivity.class,WAIT_FOR_ACTIVITY_TIMEOUT));
-
-		Button resultBtn = (Button)solo.getView(R.id.dialog_btn);
-		assertTrue(resultBtn!=null);
-		
-		solo.clickOnButton("Dialog");
-		
-		assertTrue("This is an example of a dialog",solo.waitForDialogToOpen(WAIT_FOR_DIALOG_TIMEOUT));
-		assertTrue(solo.waitForText("Dialog"));
-
-	}
 }

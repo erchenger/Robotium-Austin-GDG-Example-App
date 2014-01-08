@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends Activity {
-	private Button dialogBtn, loginBtn;
+	private Button loginBtn;
 	private EditText loginEt;
 	private AlertDialog.Builder builder;
 
@@ -21,8 +21,6 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		dialogBtn = (Button)findViewById(R.id.dialog_btn);
-		dialogBtn.setOnClickListener(clickListener);
 		
 		loginBtn = (Button)findViewById(R.id.login_btn);
 		loginBtn.setOnClickListener(clickListener);
@@ -45,9 +43,6 @@ public class MainActivity extends Activity {
 			int viewId = v.getId();
 
 			switch(viewId){
-				case R.id.dialog_btn:
-					showDialogBtn("Dialog","This is an example of a dialog");
-					break;
 				case R.id.login_btn:
 					login();
 					break;

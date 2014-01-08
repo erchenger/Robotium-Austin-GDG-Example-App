@@ -9,11 +9,6 @@
     tools:context=".MainActivity" >
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
-
-    <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,12 +34,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:orientation="vertical" >
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/dialog_btn"
-            android:text="@string/dialog_btn" />
 
         <EditText
             android:id="@+id/name_input"
