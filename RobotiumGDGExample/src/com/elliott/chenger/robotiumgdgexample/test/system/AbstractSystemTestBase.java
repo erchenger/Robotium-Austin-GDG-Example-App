@@ -7,10 +7,10 @@ import com.jayway.android.robotium.solo.Solo;
 
 public abstract class AbstractSystemTestBase <T extends Activity> extends ActivityInstrumentationTestCase2<T> {
 	
-	public static final int WAIT_FOR_ACTIVITY_TIMEOUT = 300000;	
-	public static final int WAIT_FOR_DIALOG_TIMEOUT = 300000;	
-	public static final int WAIT_FOR_VIEW_TIMEOUT = 60000;	
-	public static final int WAIT_FOR_TEXT_TIMEOUT = 60000;	
+	public static final int WAIT_FOR_ACTIVITY_TIMEOUT = 30000;	
+	public static final int WAIT_FOR_DIALOG_TIMEOUT = 30000;	
+	public static final int WAIT_FOR_VIEW_TIMEOUT = 6000;	
+	public static final int WAIT_FOR_TEXT_TIMEOUT = 6000;	
 	public static final int STANDARD_WAIT_TIME = 30000;
 	public static final int SHORT_WAIT_TIME = 5000;
 	
